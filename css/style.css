@@ -1,0 +1,47 @@
+
+#section_depoimentos {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container {
+    max-width: 100%;
+    padding: 20px;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.comentario {
+    background-color: #f9f9f9;
+    height: 220px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    animation: scroll 20s linear infinite;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-130%);
+    }
+}
+@media (max-width: 768px) {
+    .comentario {
+        animation: scroll-vertical 30s linear infinite;
+    }
+
+    @keyframes scroll-vertical {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-430%);
+        }
+    }
+}
